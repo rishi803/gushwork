@@ -2261,10 +2261,6 @@ border: 1px solid var(--color-border-medium);
   .tech-specs--title {
     font-size: 28px;
   }
-
-  .tech-specs--table {
-    min-width: 480px;
-  }
 }
 
 @media (max-width: 800px) {
