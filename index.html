@@ -71,22 +71,21 @@
                     <div class="hero--carousel">
                         <div class="carousel" id="mainCarousel">
                             <div class="carousel--main" id="carouselMain">
-                                <div class="carousel--main-inner">
+                                <div class="carousel--main-inner" id="carouselImageArea">
                                     <img src="images/hero-image-first-slide.jpg"
                                         alt="HDPE Pipe product image" class="carousel--image" id="mainImage">
+                                    <!-- Zoom only over image, not over prev/next arrows -->
+                                    <div class="carousel--zoom-lens" id="zoomLens"></div>
+                                    <div class="carousel--zoom-icon" id="carouselZoomIcon" aria-hidden="true">
+                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="11" cy="11" r="8"/>
+                                            <path d="M21 21l-4.35-4.35"/>
+                                            <path d="M11 8v6M8 11h6"/>
+                                        </svg>
+                                    </div>
                                 </div>
-                                <!-- Zoom lens overlay (activated on hover) -->
-                                <div class="carousel--zoom-lens" id="zoomLens"></div>
                                 <!-- Zoom result panel (positioned to the right) -->
                                 <div class="carousel--zoom-result" id="zoomResult"></div>
-                                <!-- Zoom icon (visible on hover) -->
-                                <div class="carousel--zoom-icon" id="carouselZoomIcon" aria-hidden="true">
-                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="11" cy="11" r="8"/>
-                                        <path d="M21 21l-4.35-4.35"/>
-                                        <path d="M11 8v6M8 11h6"/>
-                                    </svg>
-                                </div>
                                 <!-- Navigation arrows -->
                                 <button class="carousel--arrow carousel--arrow--left" id="carouselPrev"
                                     aria-label="Previous image">

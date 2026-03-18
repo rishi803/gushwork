@@ -50,24 +50,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Zoom on Hover ----
-  const carouselMain = document.getElementById('carouselMain') || document.querySelector('.carousel--main');
+  // ---- Zoom on Hover (only over image area; prev/next arrows just change image) ----
+  const carouselImageArea = document.getElementById('carouselImageArea') || document.querySelector('.carousel--main-inner');
   const zoomLens = document.getElementById('zoomLens');
   const zoomResult = document.getElementById('zoomResult');
 
-  carouselMain.addEventListener('mouseenter', () => {
+  carouselImageArea.addEventListener('mouseenter', () => {
     zoomLens.style.display = 'block';
     zoomResult.style.display = 'block';
     zoomResult.style.backgroundImage = `url(${carouselImages[currentSlide]})`;
   });
 
-  carouselMain.addEventListener('mouseleave', () => {
+  carouselImageArea.addEventListener('mouseleave', () => {
     zoomLens.style.display = 'none';
     zoomResult.style.display = 'none';
   });
 
-  carouselMain.addEventListener('mousemove', (e) => {
-    const rect = carouselMain.getBoundingClientRect();
+  carouselImageArea.addEventListener('mousemove', (e) => {
+    const rect = carouselImageArea.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
